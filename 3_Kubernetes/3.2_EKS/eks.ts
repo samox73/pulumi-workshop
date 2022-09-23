@@ -28,6 +28,7 @@ const cluster: eks.Cluster = new eks.Cluster(`eksCluster`, {
   name: clusterName,
   skipDefaultNodeGroup: true,
   vpcId: vpc.id,
+  version: "1.23",
   privateSubnetIds: privateSubnetIds,
   instanceRoles: [role],
   createOidcProvider: true,
