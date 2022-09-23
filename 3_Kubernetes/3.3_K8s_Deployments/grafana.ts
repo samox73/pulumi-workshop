@@ -1,6 +1,5 @@
 import { cluster } from "../3.2_EKS/eks";
 import * as k8s from "@pulumi/kubernetes";
-import { Config } from "@pulumi/pulumi";
 
 const appName = "grafana";
 const namespace = new k8s.core.v1.Namespace(
