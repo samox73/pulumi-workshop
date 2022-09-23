@@ -34,9 +34,6 @@ const vpc: awsx.ec2.Vpc = new awsx.ec2.Vpc(`vpc`, {
 });
 
 const privateSubnetIds = vpc.privateSubnets.then((sns) => sns.map((sn) => sn.id));
-const publicSubnetIds = vpc.publicSubnets.then((sns) => sns.map((sn) => sn.id));
-const privateRouteTableIds = vpc.privateSubnets.then((sns) => sns.map((sn) => sn.routeTable?.id));
-const publicRouteTableIds = vpc.publicSubnets.then((sns) => sns.map((sn) => sn.routeTable?.id));
 
 // we export these variables so that we can reference them from other projects
-export { vpc, privateSubnetIds, privateRouteTableIds };
+export { vpc, privateSubnetIds };

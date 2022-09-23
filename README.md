@@ -126,7 +126,7 @@ Writing deployments, services, ingresses, etc. is cumbersome and time-consuming.
 - Alertmanager
 - Grafana
 - node-exporter (on each node)
-and registers Prometheus as a datasource in Grafana.
+and registers Prometheus as a data source in Grafana.
 
 See `3_Kubernetes/3.4_Helm/prometheus.ts`.
 

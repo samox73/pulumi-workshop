@@ -8,8 +8,4 @@ export const privateSubnetIds: pulumi.Output<string[]> = stagingRef
   .requireOutput("privateSubnetIds")
   .apply((value) => <string[]>value);
 
-export const privateRouteTableIds: pulumi.Output<string[]> = stagingRef
-  .requireOutput("privateRouteTableIds")
-  .apply((value) => <string[]>value);
-
 export const vpc: pulumi.Output<aws.ec2.Vpc> = stagingRef.requireOutput("vpc").apply((value) => <aws.ec2.Vpc>value);
